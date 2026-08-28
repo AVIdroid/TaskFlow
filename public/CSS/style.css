@@ -1,0 +1,504 @@
+/* Global Styles */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --dark-bg: #2c3e50;
+  --light-bg: #ecf0f1;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --border-color: #bdc3c7;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.header .subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.back-button {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+/* Add Todo Section */
+.add-todo-section {
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.add-todo-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-field.textarea {
+  resize: vertical;
+  min-height: 100px;
+  width: 100%;
+  flex: none;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background: var(--light-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--border-color);
+}
+
+.btn-edit {
+  background: #3498db;
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-edit:hover {
+  background: #2980b9;
+}
+
+.btn-delete {
+  background: #e74c3c;
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-delete:hover {
+  background: #c0392b;
+}
+
+.btn-delete-large {
+  background: #e74c3c;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.btn-delete-large:hover {
+  background: #c0392b;
+}
+
+.btn-toggle {
+  background: #95a5a6;
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-toggle.active {
+  background: var(--secondary-color);
+}
+
+.btn-toggle:hover {
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Todos Section */
+.todos-section {
+  padding: 30px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-item {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.todo-item:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+  border-left-color: var(--secondary-color);
+  background: #f0fdf4;
+}
+
+.todo-item.completed .title-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.todo-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.checkbox.checked {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.title-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.todo-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 8px 0;
+  padding-left: 36px;
+}
+
+.todo-meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding-left: 36px;
+  margin-top: 8px;
+}
+
+.created-date {
+  display: block;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Edit Section */
+.edit-section {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.status-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.status-label input {
+  cursor: pointer;
+}
+
+.form-meta {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.form-meta p {
+  margin: 5px 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.form-actions .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+
+/* Delete Section */
+.delete-section {
+  background: #fff3f3;
+  border: 1px solid #fde4e4;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.delete-section h3 {
+  color: var(--danger-color);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.delete-section p {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.delete-section form {
+  display: flex;
+}
+
+.delete-section .btn-delete-large {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .add-todo-form {
+    flex-direction: column;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+  }
+
+  .todo-actions {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stat-item {
+    margin: 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .back-button {
+    position: static;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    border-radius: 8px;
+  }
+
+  .header {
+    padding: 30px 20px;
+  }
+
+  .header h1 {
+    font-size: 1.7rem;
+  }
+
+  .add-todo-section,
+  .todos-section,
+  .edit-section {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .todo-item {
+    padding: 15px;
+  }
+
+  .title-text {
+    font-size: 1rem;
+  }
+}
