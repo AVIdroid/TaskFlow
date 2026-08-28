@@ -17,7 +17,7 @@ Basic full-stack web application for task management.
 ## Project Structure
 
 ```
-todo-app/
+TaskFlow-app/
 ├── public/
 │   └── css/
 │       └── style.css
