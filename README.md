@@ -1,8 +1,8 @@
-# To-Do List App
+# Task Manager App
 
 Basic full-stack web application for task management.
 
-- Built a full-stack To-Do List application using Node.js, Express.js and PostgreSQL.
+- Built a full-stack Task Manager application using Node.js, Express.js and PostgreSQL.
 - Implemented CRUD operations with EJS templates, enabling efficient task creation and management.
 - Designed a responsive frontend using HTML and CSS for seamless user interaction.
 
@@ -39,7 +39,7 @@ todo-app/
 
 1. Clone the repo
    ```
-   git clone https://github.com/AVIdroid/todo-list-app.git
+   git clone https://github.com/AVIdroid/TaskFlow.git
    cd todo-list-app
    ```
 
