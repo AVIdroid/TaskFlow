@@ -32,6 +32,8 @@ todo-app/
 ├── .env.example
 └── package.json
 ```
+## Screenshot
+<img width="944" height="443" alt="Screenshot 2026-08-28 090453" src="https://github.com/user-attachments/assets/d57385c1-839e-4307-817e-5f82fd07a7db" />
 
 ## Setup
 
