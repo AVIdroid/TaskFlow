@@ -40,7 +40,7 @@ TaskFlow-app/
 1. Clone the repo
    ```
    git clone https://github.com/AVIdroid/TaskFlow.git
-   cd todo-list-app
+   cd TaskFlow
    ```
 
 2. Install dependencies
