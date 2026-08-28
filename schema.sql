@@ -1,4 +1,4 @@
--- Run this once in your PostgreSQL database before starting the app
+
 
 CREATE TABLE IF NOT EXISTS todos (
     id SERIAL PRIMARY KEY,
