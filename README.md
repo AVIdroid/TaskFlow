@@ -37,7 +37,7 @@ todo-app/
 
 1. Clone the repo
    ```
-   git clone https://github.com/your-username/todo-list-app.git
+   git clone https://github.com/AVIdroid/todo-list-app.git
    cd todo-list-app
    ```
 
